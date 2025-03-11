@@ -14,7 +14,7 @@ for filename in os.listdir(results_dir):
     filepath = os.path.join(results_dir, filename)
     
     # Updated regex: use a greedy match for contig1 and then capture the rest as contig2.
-    mname = re.match(r"(.+)_(.+)\.report$", filename)
+    mname = re.match(r"(.+)--(.+)\.report$", filename)
     if not mname:
         print(f"Skipping file with unexpected name format: {filename}")
         continue

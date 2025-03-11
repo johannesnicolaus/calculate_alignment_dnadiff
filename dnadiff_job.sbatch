@@ -15,7 +15,7 @@ f2="$2"
 # Create base names for output prefix (removing extensions)
 base1=$(basename "$f1" | sed 's/\..*//')
 base2=$(basename "$f2" | sed 's/\..*//')
-prefix="${base1}_${base2}"
+prefix="${base1}--${base2}"
 
 # Create an output directory for dnadiff results
 mkdir -p dnadiff_results
