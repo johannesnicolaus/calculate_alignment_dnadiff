@@ -13,8 +13,8 @@ for filename in os.listdir(results_dir):
         continue
     filepath = os.path.join(results_dir, filename)
     
-    # Expect filenames like "contigA_contigB.report"
-    mname = re.match(r"(.+?)_(.+?)\.report", filename)
+    # Updated regex: use a greedy match for contig1 and then capture the rest as contig2.
+    mname = re.match(r"(.+)_(.+)\.report$", filename)
     if not mname:
         print(f"Skipping file with unexpected name format: {filename}")
         continue
