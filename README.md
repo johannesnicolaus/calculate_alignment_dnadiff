@@ -22,3 +22,18 @@ This script will do all of the steps (1-3) automatically
 ```shell
 ./all_script.sh -i assembly.fa
 ```
+
+## For 2 assembly files
+This can be useful to map to a reference genome
+```shell
+./all_script_diff.sh -i1 reference.fa -i2 assembly.fa
+```
+
+
+## Output
+- `contigs*`: contains the split contigs
+- `dnadiff_results`: contains dnadiff results
+- `logs`: contains sbatch logs
+- `final_sorted_report.txt`: contains final report 
+
+
